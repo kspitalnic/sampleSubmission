@@ -1,32 +1,32 @@
-{
-    "K001": [
+{       
+    "participants": [
         {
-            "id:": "K00101A",
-            "participant:": "K001",
+            "id": "K00101A",
+            "participant": "K001",
             "S1 or S2": "S1",
-            "date:": "NULL",
-            "time:": "NULL"
+            "date": "NULL",
+            "time": "NULL"
         },
         {
-            "id:": "K00102B",
-            "participant:": "K001",
+            "id": "K00102B",
+            "participant": "K001",
             "S1 or S2": "S2",
-            "date:": "NULL",
-            "time:": "NULL"
+            "date": "NULL",
+            "time": "NULL"
         },
         {
-            "id:": "K00101C",
-            "participant:": "K001",
+            "id": "K00101C",
+            "participant": "K001",
             "S1 or S2": "S1",
-            "date:": "NULL",
-            "time:": "NULL"
+            "date": "NULL",
+            "time": "NULL"
         },
         {
-            "id:": "K00102D",
-            "participant:": "K001",
+            "id": "K00102D",
+            "participant": "K001",
             "S1 or S2": "S2",
-            "date:": "NULL",
-            "time:": "NULL"
+            "date": "NULL",
+            "time": "NULL"
         }
     ]
 }
