@@ -5,6 +5,7 @@ const app = express();
 const apiRoutes = require('./routes/apiroutes.js');
 const htmlRoutes = require('./routes/htmlroutes'); 
 
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
