@@ -49,6 +49,10 @@
     outline: none;
     background-color: var(--secondary);
   }
+
+  .btnClicked {
+      background-color: var(grey);
+  }
   
   .btn:hover {
     color: var(--light);
