@@ -105,7 +105,7 @@ for(let i=0; i<json.length;i++){
 
 
     router.get('/participants', (req, res) => {
-    let results = fileOutputName ; 
+    let results = json ; 
     if (req.query) {
       users = filterByQuery(req.query, results);
     }
@@ -115,7 +115,7 @@ for(let i=0; i<json.length;i++){
 
 
     router.get('/participants/:id', (req, res) => {
-    const result = findById(req.params.id, output);
+    const result = findById(req.params.id, json[i]);
     if (result) {
       res.json(result);
     } else {
@@ -125,3 +125,66 @@ for(let i=0; i<json.length;i++){
 
 
 module.exports = router; 
+
+// const router = require('express').Router();
+// // const { participants } = require('../users.csv');
+// const { filterByQuery } = require('../lib/index.js');
+// // require('../users.csv');
+// const fs = require("fs");
+
+// let csvToJson = require('convert-csv-to-json');
+
+
+// let fileInputName = 'users.csv'; 
+// let fileOutputName = 'output.json';
+// // csvToJson.generateJsonFileFromCsv(fileInputName,fileOutputName);
+
+// // let json = csvToJson.getJsonFromCsv("users.csv");
+// // for(let i=0; i<json.length;i++){
+// //     console.log(json[i]);
+// // }
+// let json = csvToJson.parseSubArray('*',',').getJsonFromCsv(fileInputName);
+//     console.log(json);
+// for(let i=0; i<json.length;i++){
+//     console.log(json[i]);
+//     return json;
+// }
+// // fs.writeFile(fileOutputName, JSON.stringify(json), (err) => {
+// //   if (err)
+// //     console.log(err);
+// //   else {
+// //     console.log("File written successfully\n");}
+// //   })
+
+// //   const output = require(fileOutputName);
+
+
+//   // router.get('/participants', (req, res) => {
+//   //   console.log('inside get'); 
+//   //   output.getData().then((participants) => {
+//   //     return res.json(participants);
+//   //   }).catch((err) => res.status(400).json(err))
+//   // })
+
+//     router.get('/participants', (req, res) => {
+//       let data = fs.readFileSync(output);
+//       let results = JSON.parse(data);
+//       console.log(results);
+//       if (req.query) {
+//       users = filterByQuery(req.query, results);
+//     }
+//     res.json(console.log(results));
+//   });
+
+
+//     router.get('/participants/:id=?', (req, res) => {
+//     const result = findById(req.params.id, output);
+//     if (result) {
+//       res.json(result);
+//     } else {
+//       res.send(404);
+//     }
+//   });
+
+
+// module.exports = router; 
